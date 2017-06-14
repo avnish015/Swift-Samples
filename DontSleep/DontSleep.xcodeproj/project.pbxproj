@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		371604761C634E4A00D0FEE4 /* MenuBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371604751C634E4A00D0FEE4 /* MenuBarIcon.swift */; };
+		371E67931C7EBF12002FDEF4 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371E67921C7EBF12002FDEF4 /* ServiceManagement.framework */; };
+		371E679B1C7EC0FA002FDEF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E679A1C7EC0FA002FDEF4 /* AppDelegate.swift */; };
+		371E679D1C7EC0FA002FDEF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371E679C1C7EC0FA002FDEF4 /* Assets.xcassets */; };
+		371E67A01C7EC0FA002FDEF4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371E679E1C7EC0FA002FDEF4 /* MainMenu.xib */; };
+		371E67A61C7EC19B002FDEF4 /* DontSleepHelperApp.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 371E67981C7EC0FA002FDEF4 /* DontSleepHelperApp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3766AEE01C6C4BB30092C14A /* ActivationDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3766AEDF1C6C4BB30092C14A /* ActivationDuration.swift */; };
+		376705B91C6B16970038C3C7 /* NSUserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376705B81C6B16970038C3C7 /* NSUserDefaults+Keys.swift */; };
+		376705BD1C6B340E0038C3C7 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376705BC1C6B340E0038C3C7 /* Preferences.storyboard */; };
+		376705C01C6B41B70038C3C7 /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376705BF1C6B41B70038C3C7 /* GeneralPreferencesViewController.swift */; };
+		376705C21C6B4FE10038C3C7 /* AdvancedPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376705C11C6B4FE10038C3C7 /* AdvancedPreferencesViewController.swift */; };
+		3782DD861C72E48C0035198E /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3782DD851C72E48C0035198E /* Preference.swift */; };
+		3782DD891C7305AB0035198E /* BatteryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3782DD881C7305AB0035198E /* BatteryStatus.swift */; };
+		3782DD8B1C7307880035198E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3782DD8A1C7307880035198E /* IOKit.framework */; };
+		37F403FD1C61CC0A00A9C3E9 /* SleepWakeTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F403FC1C61CC0A00A9C3E9 /* SleepWakeTimer.swift */; };
+		7F9BE65B1C5F75B4005919BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9BE65A1C5F75B4005919BA /* AppDelegate.swift */; };
+		7F9BE65D1C5F75B4005919BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9BE65C1C5F75B4005919BA /* Assets.xcassets */; };
+		7F9BE6601C5F75B4005919BA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F9BE65E1C5F75B4005919BA /* MainMenu.xib */; };
+		7F9BE6681C5F77BD005919BA /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9BE6671C5F77BD005919BA /* AppController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		371E67A51C7EC160002FDEF4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				371E67A61C7EC19B002FDEF4 /* DontSleepHelperApp.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		371604751C634E4A00D0FEE4 /* MenuBarIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarIcon.swift; sourceTree = "<group>"; };
+		371E67921C7EBF12002FDEF4 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		371E67981C7EC0FA002FDEF4 /* DontSleepHelperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DontSleepHelperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		371E679A1C7EC0FA002FDEF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		371E679C1C7EC0FA002FDEF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		371E679F1C7EC0FA002FDEF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		371E67A11C7EC0FA002FDEF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3766AEDF1C6C4BB30092C14A /* ActivationDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivationDuration.swift; sourceTree = "<group>"; };
+		376705B81C6B16970038C3C7 /* NSUserDefaults+Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+Keys.swift"; sourceTree = "<group>"; };
+		376705BC1C6B340E0038C3C7 /* Preferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		376705BF1C6B41B70038C3C7 /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
+		376705C11C6B4FE10038C3C7 /* AdvancedPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedPreferencesViewController.swift; sourceTree = "<group>"; };
+		3782DD851C72E48C0035198E /* Preference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		3782DD881C7305AB0035198E /* BatteryStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryStatus.swift; sourceTree = "<group>"; };
+		3782DD8A1C7307880035198E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		3782DD8E1C7315E10035198E /* DontSleep-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DontSleep-Bridging-Header.h"; sourceTree = "<group>"; };
+		37F403FC1C61CC0A00A9C3E9 /* SleepWakeTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepWakeTimer.swift; sourceTree = "<group>"; };
+		7F9BE6571C5F75B4005919BA /* DontSleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DontSleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F9BE65A1C5F75B4005919BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F9BE65C1C5F75B4005919BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F9BE65F1C5F75B4005919BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7F9BE6611C5F75B4005919BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F9BE6671C5F77BD005919BA /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		371E67951C7EC0FA002FDEF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F9BE6541C5F75B4005919BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371E67931C7EBF12002FDEF4 /* ServiceManagement.framework in Frameworks */,
+				3782DD8B1C7307880035198E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		371604741C634E1500D0FEE4 /* MenuBarIcon */ = {
+			isa = PBXGroup;
+			children = (
+				371604751C634E4A00D0FEE4 /* MenuBarIcon.swift */,
+			);
+			name = MenuBarIcon;
+			sourceTree = "<group>";
+		};
+		371E67991C7EC0FA002FDEF4 /* DontSleepHelperApp */ = {
+			isa = PBXGroup;
+			children = (
+				371E679A1C7EC0FA002FDEF4 /* AppDelegate.swift */,
+				371E679C1C7EC0FA002FDEF4 /* Assets.xcassets */,
+				371E679E1C7EC0FA002FDEF4 /* MainMenu.xib */,
+				371E67A11C7EC0FA002FDEF4 /* Info.plist */,
+			);
+			path = DontSleepHelperApp;
+			sourceTree = "<group>";
+		};
+		3766AEDE1C6C4B5B0092C14A /* Advanced */ = {
+			isa = PBXGroup;
+			children = (
+				376705C11C6B4FE10038C3C7 /* AdvancedPreferencesViewController.swift */,
+				3782DD851C72E48C0035198E /* Preference.swift */,
+			);
+			name = Advanced;
+			sourceTree = "<group>";
+		};
+		376705B51C6B15B70038C3C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				376705B81C6B16970038C3C7 /* NSUserDefaults+Keys.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		376705BB1C6B337F0038C3C7 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				376705BC1C6B340E0038C3C7 /* Preferences.storyboard */,
+				3766AEDE1C6C4B5B0092C14A /* Advanced */,
+				376705BE1C6B41720038C3C7 /* General */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		376705BE1C6B41720038C3C7 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				376705BF1C6B41B70038C3C7 /* GeneralPreferencesViewController.swift */,
+				3766AEDF1C6C4BB30092C14A /* ActivationDuration.swift */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		3782DD871C73056F0035198E /* Battery Status */ = {
+			isa = PBXGroup;
+			children = (
+				3782DD881C7305AB0035198E /* BatteryStatus.swift */,
+			);
+			name = "Battery Status";
+			sourceTree = "<group>";
+		};
+		3782DD8C1C7307C50035198E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				371E67921C7EBF12002FDEF4 /* ServiceManagement.framework */,
+				3782DD8A1C7307880035198E /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F9BE64E1C5F75B3005919BA = {
+			isa = PBXGroup;
+			children = (
+				7F9BE6591C5F75B4005919BA /* DontSleep */,
+				371E67991C7EC0FA002FDEF4 /* DontSleepHelperApp */,
+				3782DD8C1C7307C50035198E /* Frameworks */,
+				7F9BE6581C5F75B4005919BA /* Products */,
+				3782DD8E1C7315E10035198E /* DontSleep-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		7F9BE6581C5F75B4005919BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F9BE6571C5F75B4005919BA /* DontSleep.app */,
+				371E67981C7EC0FA002FDEF4 /* DontSleepHelperApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F9BE6591C5F75B4005919BA /* DontSleep */ = {
+			isa = PBXGroup;
+			children = (
+				7F9BE65A1C5F75B4005919BA /* AppDelegate.swift */,
+				7F9BE6671C5F77BD005919BA /* AppController.swift */,
+				37F403FC1C61CC0A00A9C3E9 /* SleepWakeTimer.swift */,
+				7F9BE65E1C5F75B4005919BA /* MainMenu.xib */,
+				7F9BE65C1C5F75B4005919BA /* Assets.xcassets */,
+				7F9BE6611C5F75B4005919BA /* Info.plist */,
+				376705BB1C6B337F0038C3C7 /* Preferences */,
+				371604741C634E1500D0FEE4 /* MenuBarIcon */,
+				3782DD871C73056F0035198E /* Battery Status */,
+				376705B51C6B15B70038C3C7 /* Extensions */,
+			);
+			path = DontSleep;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		371E67971C7EC0FA002FDEF4 /* DontSleepHelperApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 371E67A21C7EC0FA002FDEF4 /* Build configuration list for PBXNativeTarget "DontSleepHelperApp" */;
+			buildPhases = (
+				371E67941C7EC0FA002FDEF4 /* Sources */,
+				371E67951C7EC0FA002FDEF4 /* Frameworks */,
+				371E67961C7EC0FA002FDEF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DontSleepHelperApp;
+			productName = DontSleepHelperApp;
+			productReference = 371E67981C7EC0FA002FDEF4 /* DontSleepHelperApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F9BE6561C5F75B4005919BA /* DontSleep */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F9BE6641C5F75B4005919BA /* Build configuration list for PBXNativeTarget "DontSleep" */;
+			buildPhases = (
+				7F9BE6531C5F75B4005919BA /* Sources */,
+				7F9BE6541C5F75B4005919BA /* Frameworks */,
+				7F9BE6551C5F75B4005919BA /* Resources */,
+				371E67A51C7EC160002FDEF4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DontSleep;
+			productName = DontSleep;
+			productReference = 7F9BE6571C5F75B4005919BA /* DontSleep.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F9BE64F1C5F75B3005919BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "varsha sambhajirao aware";
+				TargetAttributes = {
+					371E67971C7EC0FA002FDEF4 = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0830;
+					};
+					7F9BE6561C5F75B4005919BA = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0830;
+					};
+				};
+			};
+			buildConfigurationList = 7F9BE6521C5F75B3005919BA /* Build configuration list for PBXProject "DontSleep" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F9BE64E1C5F75B3005919BA;
+			productRefGroup = 7F9BE6581C5F75B4005919BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F9BE6561C5F75B4005919BA /* DontSleep */,
+				371E67971C7EC0FA002FDEF4 /* DontSleepHelperApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		371E67961C7EC0FA002FDEF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371E679D1C7EC0FA002FDEF4 /* Assets.xcassets in Resources */,
+				371E67A01C7EC0FA002FDEF4 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F9BE6551C5F75B4005919BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376705BD1C6B340E0038C3C7 /* Preferences.storyboard in Resources */,
+				7F9BE65D1C5F75B4005919BA /* Assets.xcassets in Resources */,
+				7F9BE6601C5F75B4005919BA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		371E67941C7EC0FA002FDEF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371E679B1C7EC0FA002FDEF4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F9BE6531C5F75B4005919BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3782DD861C72E48C0035198E /* Preference.swift in Sources */,
+				37F403FD1C61CC0A00A9C3E9 /* SleepWakeTimer.swift in Sources */,
+				7F9BE65B1C5F75B4005919BA /* AppDelegate.swift in Sources */,
+				376705B91C6B16970038C3C7 /* NSUserDefaults+Keys.swift in Sources */,
+				3766AEE01C6C4BB30092C14A /* ActivationDuration.swift in Sources */,
+				3782DD891C7305AB0035198E /* BatteryStatus.swift in Sources */,
+				7F9BE6681C5F77BD005919BA /* AppController.swift in Sources */,
+				376705C01C6B41B70038C3C7 /* GeneralPreferencesViewController.swift in Sources */,
+				371604761C634E4A00D0FEE4 /* MenuBarIcon.swift in Sources */,
+				376705C21C6B4FE10038C3C7 /* AdvancedPreferencesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		371E679E1C7EC0FA002FDEF4 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				371E679F1C7EC0FA002FDEF4 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		7F9BE65E1C5F75B4005919BA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F9BE65F1C5F75B4005919BA /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		371E67A31C7EC0FA002FDEF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DontSleepHelperApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Exilant.DontSleepHelperApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		371E67A41C7EC0FA002FDEF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DontSleepHelperApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Exilant.DontSleepHelperApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		7F9BE6621C5F75B4005919BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F9BE6631C5F75B4005919BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7F9BE6651C5F75B4005919BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DontSleep/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = Exilant.DontSleep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DontSleep-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7F9BE6661C5F75B4005919BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DontSleep/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = Exilant.DontSleep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DontSleep-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		371E67A21C7EC0FA002FDEF4 /* Build configuration list for PBXNativeTarget "DontSleepHelperApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				371E67A31C7EC0FA002FDEF4 /* Debug */,
+				371E67A41C7EC0FA002FDEF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F9BE6521C5F75B3005919BA /* Build configuration list for PBXProject "DontSleep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F9BE6621C5F75B4005919BA /* Debug */,
+				7F9BE6631C5F75B4005919BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F9BE6641C5F75B4005919BA /* Build configuration list for PBXNativeTarget "DontSleep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F9BE6651C5F75B4005919BA /* Debug */,
+				7F9BE6661C5F75B4005919BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F9BE64F1C5F75B3005919BA /* Project object */;
+}

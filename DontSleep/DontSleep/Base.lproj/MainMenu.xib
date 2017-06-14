@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="DontSleep" customModuleProvider="target"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="DLw-QL-qHU" customClass="AppController" customModule="DontSleep" customModuleProvider="target">
+            <connections>
+                <outlet property="menu" destination="ymx-NW-XhK" id="toM-ae-L9x"/>
+                <outlet property="timerMenu" destination="ED2-Hg-dtB" id="ZNB-f0-puG"/>
+            </connections>
+        </customObject>
+        <menu id="ymx-NW-XhK">
+            <items>
+                <menuItem title="Activate for Duration" id="UJS-rz-P6Q">
+                    <modifierMask key="keyEquivalentModifierMask" shift="YES" command="YES"/>
+                    <menu key="submenu" title="Activate for Duration" id="ED2-Hg-dtB">
+                        <items>
+                            <menuItem title="Active" tag="-1" enabled="NO" id="eSC-DT-rcz">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="c2H-wh-bGS"/>
+                            <menuItem title="5 minutes" tag="300" id="vqt-U9-U66">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectTimeInterval:" target="DLw-QL-qHU" id="Rn3-Lh-7TB"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="10 minutes" tag="600" id="K96-nW-j45">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectTimeInterval:" target="DLw-QL-qHU" id="p2z-lc-Ton"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="15 minutes" tag="900" id="s6v-o0-mOG">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectTimeInterval:" target="DLw-QL-qHU" id="QXS-jc-sbU"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="30 minutes" tag="1800" id="Qgz-ec-dKM">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectTimeInterval:" target="DLw-QL-qHU" id="k7c-jJ-yzf"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="1 hour" tag="3600" id="8RS-r6-4W4">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectTimeInterval:" target="DLw-QL-qHU" id="8Uy-mT-M27"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="2 hours" tag="7200" id="25O-6Q-8VS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectTimeInterval:" target="DLw-QL-qHU" id="TVN-Id-f53"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="5 hours" tag="18000" id="qC4-cb-evR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectTimeInterval:" target="DLw-QL-qHU" id="ISL-rh-S5G"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Indefinitely" id="JPy-8R-qd8">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectTimeInterval:" target="DLw-QL-qHU" id="kd5-Ft-ybF"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                        <connections>
+                            <outlet property="delegate" destination="DLw-QL-qHU" id="zAH-Db-kQ2"/>
+                        </connections>
+                    </menu>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="TUw-nY-VGh"/>
+                <menuItem title="Preferences…" keyEquivalent="," id="NDD-CH-iko">
+                    <connections>
+                        <action selector="showPreferencesWindow:" target="Voe-Tx-rLC" id="Wqw-U2-jUw"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="f0o-Bx-ko5"/>
+                <menuItem title="Quit" keyEquivalent="q" id="Nj2-J1-KKa">
+                    <connections>
+                        <action selector="terminate:" target="-1" id="mYM-Mh-HwZ"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="385.5" y="210.5"/>
+        </menu>
+    </objects>
+</document>
