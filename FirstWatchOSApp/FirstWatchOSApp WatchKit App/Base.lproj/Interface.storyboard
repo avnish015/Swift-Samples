@@ -16,7 +16,7 @@
                     <items>
                         <table alignment="left" id="fgz-Jz-8vV">
                             <items>
-                                <tableRow identifier="MainTableType" id="lMD-Ja-ZPR" customClass="MainTableType" customModule="FirstWatchOSApp_WatchKit_Extension">
+                                <tableRow identifier="EmployeeCustomCell" id="lMD-Ja-ZPR" customClass="MainTableType" customModule="FirstWatchOSApp_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="20" alignment="left" id="tNX-gp-Ssf">
                                         <items>
                                             <label width="53" alignment="left" text="Label" id="eyH-50-n3B">

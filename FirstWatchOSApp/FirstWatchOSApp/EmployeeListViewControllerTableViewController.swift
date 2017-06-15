@@ -34,7 +34,7 @@ class EmployeeListViewControllerTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeCustomCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.employeeCustomCell, for: indexPath)
         if let employeeCell = cell as? CustomTableViewCell {
             
             employeeCell.employee = employeeArray[indexPath.row]
@@ -71,7 +71,7 @@ class EmployeeListViewControllerTableViewController: UITableViewController {
             }
             
             print(encodedEmployeeArray)
-            session.sendMessage(["EmployeeList":encodedEmployeeArray], replyHandler: { (replay) in
+            session.sendMessage([Constant.employeeList:encodedEmployeeArray], replyHandler: { (replay) in
                 
                 print(replay)
             }, errorHandler: { (error) in

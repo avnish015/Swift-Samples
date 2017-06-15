@@ -39,7 +39,7 @@ class InterfaceController: WKInterfaceController {
     
     func updateTable() {
         
-        table.setNumberOfRows(employeeArray.count, withRowType: "MainTableType")
+        table.setNumberOfRows(employeeArray.count, withRowType: Constant.employeeCustomCell)
         for i in 0..<table.numberOfRows {
             
             let controller = table.rowController(at: i) as? MainTableType
@@ -58,7 +58,7 @@ extension InterfaceController:WCSessionDelegate {
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         
-        if let employeeJSONArray = message["EmployeeList"] as? Data{
+        if let employeeJSONArray = message[Constant.employeeList] as? Data {
             
             let jsonDecoder = JSONDecoder()
             do {

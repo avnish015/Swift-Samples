@@ -13,8 +13,9 @@
 		3710C1561EF169D1004B8E9F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710C1551EF169D1004B8E9F /* CustomTableViewCell.swift */; };
 		3710C1581EF16EAC004B8E9F /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710C1571EF16EAC004B8E9F /* EmployeeDetailViewController.swift */; };
 		3710C1591EF176A6004B8E9F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710C1511EF16357004B8E9F /* Model.swift */; };
+		378D2FE21EF25A0000BE3AF0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D2FE11EF25A0000BE3AF0 /* Constant.swift */; };
+		378D2FE31EF25AD100BE3AF0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378D2FE11EF25A0000BE3AF0 /* Constant.swift */; };
 		379453F11EE9477900A1A823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379453F01EE9477900A1A823 /* AppDelegate.swift */; };
-		379453F31EE9477900A1A823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379453F21EE9477900A1A823 /* ViewController.swift */; };
 		379453F61EE9477900A1A823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379453F41EE9477900A1A823 /* Main.storyboard */; };
 		379453F81EE9477900A1A823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 379453F71EE9477900A1A823 /* Assets.xcassets */; };
 		379453FB1EE9477900A1A823 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379453F91EE9477900A1A823 /* LaunchScreen.storyboard */; };
@@ -93,9 +94,9 @@
 		3710C1531EF168B0004B8E9F /* EmployeeListViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeListViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		3710C1551EF169D1004B8E9F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		3710C1571EF16EAC004B8E9F /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
+		378D2FE11EF25A0000BE3AF0 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		379453ED1EE9477900A1A823 /* FirstWatchOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstWatchOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379453F01EE9477900A1A823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		379453F21EE9477900A1A823 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		379453F51EE9477900A1A823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		379453F71EE9477900A1A823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		379453FA1EE9477900A1A823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -156,19 +157,36 @@
 			isa = PBXGroup;
 			children = (
 				3710C1511EF16357004B8E9F /* Model.swift */,
+				378D2FE11EF25A0000BE3AF0 /* Constant.swift */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		378D2FDF1EF24A1600BE3AF0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				379453EF1EE9477900A1A823 /* FirstWatchOSApp */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		378D2FE01EF24A2200BE3AF0 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				379454191EE9477900A1A823 /* FirstWatchOSApp WatchKit App */,
+				379454281EE9477A00A1A823 /* FirstWatchOSApp WatchKit Extension */,
+			);
+			name = watchOS;
 			sourceTree = "<group>";
 		};
 		379453E41EE9477900A1A823 = {
 			isa = PBXGroup;
 			children = (
 				3710C1501EF15CEB004B8E9F /* Common */,
-				379453EF1EE9477900A1A823 /* FirstWatchOSApp */,
+				378D2FDF1EF24A1600BE3AF0 /* iOS */,
+				378D2FE01EF24A2200BE3AF0 /* watchOS */,
 				379454041EE9477900A1A823 /* FirstWatchOSAppTests */,
 				3794540F1EE9477900A1A823 /* FirstWatchOSAppUITests */,
-				379454191EE9477900A1A823 /* FirstWatchOSApp WatchKit App */,
-				379454281EE9477A00A1A823 /* FirstWatchOSApp WatchKit Extension */,
 				379453EE1EE9477900A1A823 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -192,7 +210,6 @@
 				3710C1531EF168B0004B8E9F /* EmployeeListViewControllerTableViewController.swift */,
 				3710C1571EF16EAC004B8E9F /* EmployeeDetailViewController.swift */,
 				3710C1551EF169D1004B8E9F /* CustomTableViewCell.swift */,
-				379453F21EE9477900A1A823 /* ViewController.swift */,
 				379453F41EE9477900A1A823 /* Main.storyboard */,
 				379453F71EE9477900A1A823 /* Assets.xcassets */,
 				379453F91EE9477900A1A823 /* LaunchScreen.storyboard */,
@@ -227,7 +244,7 @@
 				3794541F1EE9477900A1A823 /* Info.plist */,
 			);
 			path = "FirstWatchOSApp WatchKit App";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		379454281EE9477A00A1A823 /* FirstWatchOSApp WatchKit Extension */ = {
 			isa = PBXGroup;
@@ -242,7 +259,7 @@
 				379454291EE9477A00A1A823 /* Supporting Files */,
 			);
 			path = "FirstWatchOSApp WatchKit Extension";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		379454291EE9477A00A1A823 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -452,9 +469,9 @@
 				3710C1541EF168B0004B8E9F /* EmployeeListViewControllerTableViewController.swift in Sources */,
 				3710C1561EF169D1004B8E9F /* CustomTableViewCell.swift in Sources */,
 				3710C1521EF16357004B8E9F /* Model.swift in Sources */,
-				379453F31EE9477900A1A823 /* ViewController.swift in Sources */,
 				379453F11EE9477900A1A823 /* AppDelegate.swift in Sources */,
 				3710C1581EF16EAC004B8E9F /* EmployeeDetailViewController.swift in Sources */,
+				378D2FE21EF25A0000BE3AF0 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				378D2FE31EF25AD100BE3AF0 /* Constant.swift in Sources */,
 				379454301EE9477A00A1A823 /* NotificationController.swift in Sources */,
 				379454321EE9477A00A1A823 /* ComplicationController.swift in Sources */,
 				3794542E1EE9477A00A1A823 /* ExtensionDelegate.swift in Sources */,
