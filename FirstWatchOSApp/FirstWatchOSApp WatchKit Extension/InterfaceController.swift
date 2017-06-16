@@ -37,6 +37,7 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    //MARK:- Update the table
     func updateTable() {
         
         table.setNumberOfRows(employeeArray.count, withRowType: Constant.employeeCustomCell)
@@ -56,6 +57,7 @@ extension InterfaceController:WCSessionDelegate {
         
     }
 
+    // MARK:- Recive the message, decode it and update the tableview
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         
         if let employeeJSONArray = message[Constant.employeeList] as? Data {

@@ -57,6 +57,8 @@ class EmployeeListViewControllerTableViewController: UITableViewController {
         }
     }
     
+    // MARK:- Check for a valid and paired session with watch.  If it will succeed then encode the employee array and send it to watch(session.sendMessage())
+    
     private func sendEmployeeDetails() {
         
         if session.isReachable && session.isPaired {
@@ -82,8 +84,10 @@ class EmployeeListViewControllerTableViewController: UITableViewController {
     }
 }
 
+
 extension EmployeeListViewControllerTableViewController: EmployeeDetailProtocol {
     
+    //MARK:- Delegate method to update the array and reload the table
     func updateEmployeeData(employee:Employee) {
         
         employeeArray.append(employee)

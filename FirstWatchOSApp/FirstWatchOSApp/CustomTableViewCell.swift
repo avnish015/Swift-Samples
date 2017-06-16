@@ -12,7 +12,7 @@ class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var employeeIdLabel: UILabel!
     @IBOutlet weak var employeeNameLabel: UILabel!
-    
+    //Employee object which will update employee id and employee name
     internal var employee:Employee? {
         
         didSet {
