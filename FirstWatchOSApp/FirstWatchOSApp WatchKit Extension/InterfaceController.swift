@@ -14,7 +14,7 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController {
 
     @IBOutlet var table: WKInterfaceTable!
-    var employeeArray = [Employee]()
+    fileprivate var employeeArray = [Employee]()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)

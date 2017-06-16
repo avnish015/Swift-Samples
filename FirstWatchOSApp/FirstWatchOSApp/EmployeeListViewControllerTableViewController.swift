@@ -12,8 +12,8 @@ import WatchConnectivity
 
 class EmployeeListViewControllerTableViewController: UITableViewController {
 
-    var employeeArray = [Employee]()
-    let session = WCSession.default()
+    fileprivate var employeeArray = [Employee]()
+    fileprivate let session = WCSession.default()
     override func viewDidLoad() {
         super.viewDidLoad()
         session.delegate = self
@@ -57,7 +57,7 @@ class EmployeeListViewControllerTableViewController: UITableViewController {
         }
     }
     
-    func sendEmployeeDetails() {
+    private func sendEmployeeDetails() {
         
         if session.isReachable && session.isPaired {
             
