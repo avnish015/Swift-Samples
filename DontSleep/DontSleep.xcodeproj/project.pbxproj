@@ -21,6 +21,7 @@
 		3782DD861C72E48C0035198E /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3782DD851C72E48C0035198E /* Preference.swift */; };
 		3782DD891C7305AB0035198E /* BatteryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3782DD881C7305AB0035198E /* BatteryStatus.swift */; };
 		3782DD8B1C7307880035198E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3782DD8A1C7307880035198E /* IOKit.framework */; };
+		37944CA21F0F527100C960B5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37944CA11F0F527100C960B5 /* Constant.swift */; };
 		37F403FD1C61CC0A00A9C3E9 /* SleepWakeTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F403FC1C61CC0A00A9C3E9 /* SleepWakeTimer.swift */; };
 		7F9BE65B1C5F75B4005919BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9BE65A1C5F75B4005919BA /* AppDelegate.swift */; };
 		7F9BE65D1C5F75B4005919BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F9BE65C1C5F75B4005919BA /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		3782DD881C7305AB0035198E /* BatteryStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryStatus.swift; sourceTree = "<group>"; };
 		3782DD8A1C7307880035198E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		3782DD8E1C7315E10035198E /* DontSleep-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DontSleep-Bridging-Header.h"; sourceTree = "<group>"; };
+		37944CA11F0F527100C960B5 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		37F403FC1C61CC0A00A9C3E9 /* SleepWakeTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepWakeTimer.swift; sourceTree = "<group>"; };
 		7F9BE6571C5F75B4005919BA /* DontSleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DontSleep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F9BE65A1C5F75B4005919BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				7F9BE65A1C5F75B4005919BA /* AppDelegate.swift */,
 				7F9BE6671C5F77BD005919BA /* AppController.swift */,
 				37F403FC1C61CC0A00A9C3E9 /* SleepWakeTimer.swift */,
+				37944CA11F0F527100C960B5 /* Constant.swift */,
 				7F9BE65E1C5F75B4005919BA /* MainMenu.xib */,
 				7F9BE65C1C5F75B4005919BA /* Assets.xcassets */,
 				7F9BE6611C5F75B4005919BA /* Info.plist */,
@@ -316,6 +319,7 @@
 				3782DD891C7305AB0035198E /* BatteryStatus.swift in Sources */,
 				7F9BE6681C5F77BD005919BA /* AppController.swift in Sources */,
 				376705C01C6B41B70038C3C7 /* GeneralPreferencesViewController.swift in Sources */,
+				37944CA21F0F527100C960B5 /* Constant.swift in Sources */,
 				371604761C634E4A00D0FEE4 /* MenuBarIcon.swift in Sources */,
 				376705C21C6B4FE10038C3C7 /* AdvancedPreferencesViewController.swift in Sources */,
 			);
@@ -350,7 +354,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DontSleepHelperApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Exilant.DontSleepHelperApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exilant.DontSleepHelperApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -364,7 +368,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DontSleepHelperApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Exilant.DontSleepHelperApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exilant.DontSleepHelperApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -460,7 +464,7 @@
 				INFOPLIST_FILE = DontSleep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = Exilant.DontSleep;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exilant.DontSleep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DontSleep-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -477,7 +481,7 @@
 				INFOPLIST_FILE = DontSleep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = Exilant.DontSleep;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exilant.DontSleep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DontSleep-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

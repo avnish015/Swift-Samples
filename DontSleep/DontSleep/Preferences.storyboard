@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ko9-55-HV6">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="ko9-55-HV6">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Window Controller-->
@@ -66,7 +67,7 @@
                                     <action selector="startAtLoginPreferencesChanged:" target="Jsu-Hi-F0f" id="L5A-Od-iIl"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fVE-UG-kIR">
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVE-UG-kIR">
                                 <rect key="frame" x="74" y="148" width="358" height="14"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" title="Automatically opens the app when you start your Mac." id="QXZ-Og-z9E">
                                     <font key="font" metaFont="smallSystem"/>
@@ -84,7 +85,7 @@
                                     <binding destination="2xg-pr-mJh" name="value" keyPath="values.info.DontSleep.ActivateOnLaunch" id="tGX-N0-hSG"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aVE-r5-40i">
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVE-r5-40i">
                                 <rect key="frame" x="78" y="88" width="354" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Hdx-Gt-Ubi"/>
@@ -95,13 +96,10 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="v6a-a2-y66">
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="v6a-a2-y66">
                                 <rect key="frame" x="20" y="77" width="410" height="5"/>
-                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <font key="titleFont" metaFont="system"/>
                             </box>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cVb-EQ-nKT">
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVb-EQ-nKT">
                                 <rect key="frame" x="18" y="50" width="179" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" title="Default Activation Duration:" id="Y7U-57-HCD">
                                     <font key="font" metaFont="system"/>
@@ -129,7 +127,7 @@
                                     <binding destination="Jsu-Hi-F0f" name="selectedObject" keyPath="self.selectedActivationDuration" previousBinding="Ycd-NR-cki" id="qFG-pU-K3r"/>
                                 </connections>
                             </popUpButton>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pg5-1d-BUf">
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg5-1d-BUf">
                                 <rect key="frame" x="18" y="20" width="358" height="14"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" title="Sets the default activation duration for the menu bar icon." id="zRH-xw-gXf">
                                     <font key="font" metaFont="smallSystem"/>
@@ -194,9 +192,9 @@
                                 </connections>
                             </button>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Odq-yl-daz" userLabel="Battery Limit Container View">
-                                <rect key="frame" x="20" y="139" width="390" height="39"/>
+                                <rect key="frame" x="20" y="142" width="390" height="36"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XVH-sp-CYJ">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVH-sp-CYJ">
                                         <rect key="frame" x="366" y="0.0" width="26" height="11"/>
                                         <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="90 %" id="EoQ-Hj-XDO">
                                             <font key="font" metaFont="miniSystem"/>
@@ -205,7 +203,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a5I-fi-7Dv">
-                                        <rect key="frame" x="-2" y="14" width="394" height="27"/>
+                                        <rect key="frame" x="-2" y="14" width="394" height="24"/>
                                         <sliderCell key="cell" state="on" alignment="left" minValue="10" maxValue="90" doubleValue="20" tickMarkPosition="below" numberOfTickMarks="9" allowsTickMarkValuesOnly="YES" sliderType="linear" id="WXm-2Z-ZLS"/>
                                         <connections>
                                             <action selector="batteryStatusPreferencesChanged:" target="JdH-fO-cLI" id="6Ew-7j-h7S"/>
@@ -213,7 +211,7 @@
                                             <binding destination="KlG-xz-I47" name="enabled" keyPath="values.info.DontSleep.BatteryCapacityThresholdEnabled" id="gO7-jI-hXs"/>
                                         </connections>
                                     </slider>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Iy4-aQ-mxV">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iy4-aQ-mxV">
                                         <rect key="frame" x="182" y="0.0" width="26" height="11"/>
                                         <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="50 %" id="M35-kR-k7w">
                                             <font key="font" metaFont="miniSystem"/>
@@ -221,7 +219,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PJE-Gj-fZy">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJE-Gj-fZy">
                                         <rect key="frame" x="-2" y="0.0" width="25" height="11"/>
                                         <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="10 %" id="SIc-gZ-5gm">
                                             <font key="font" metaFont="miniSystem"/>
@@ -245,8 +243,8 @@
                                     <constraint firstItem="a5I-fi-7Dv" firstAttribute="top" secondItem="Odq-yl-daz" secondAttribute="top" id="tuT-rY-UoG"/>
                                 </constraints>
                             </customView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" preferredMaxLayoutWidth="390" translatesAutoresizingMaskIntoConstraints="NO" id="Uvj-g0-NJX">
-                                <rect key="frame" x="18" y="103" width="394" height="28"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" preferredMaxLayoutWidth="390" translatesAutoresizingMaskIntoConstraints="NO" id="Uvj-g0-NJX">
+                                <rect key="frame" x="18" y="106" width="394" height="28"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="This value will be ignored when you manually start the app below this battery capacity." id="kQu-0M-AD6">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -254,13 +252,13 @@
                                 </textFieldCell>
                             </textField>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31u-Eo-WVY">
-                                <rect key="frame" x="-1" y="0.0" width="452" height="80"/>
+                                <rect key="frame" x="-1" y="0.0" width="452" height="83"/>
                                 <clipView key="contentView" id="DPQ-To-74H">
-                                    <rect key="frame" x="1" y="1" width="450" height="78"/>
+                                    <rect key="frame" x="1" y="1" width="450" height="81"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" alternatingRowBackgroundColors="YES" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" viewBased="YES" id="6Ef-Zc-vU7">
-                                            <rect key="frame" x="0.0" y="0.0" width="449" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="81"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -311,7 +309,6 @@
                                             </connections>
                                         </tableView>
                                     </subviews>
-                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="L0l-H6-VDv"/>

@@ -8,8 +8,8 @@
 
 import Foundation
 
-let  DSUserDefaultsKeyActivateOnLaunch = "info.DontSleep.ActivateOnLaunch"
-let  DSUserDefaultsKeyNotificationsEnabled = "info.DontSleep.NotificationsEnabled"
+let DSUserDefaultsKeyActivateOnLaunch = "info.DontSleep.ActivateOnLaunch"
+let DSUserDefaultsKeyNotificationsEnabled = "info.DontSleep.NotificationsEnabled"
 let DSUserDefaultsKeyDefaultTimeInterval = "info.DontSleep.TimeInterval"
 let DSUserDefaultsKeyAllowDisplaySleep = "info.DontSleep.AllowDisplaySleep"
 let DSUserDefaultsKeyMenuBarIconHighlightDisabled = "info.DontSleep.MenuBarIconHighlightDisabled"

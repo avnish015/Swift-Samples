@@ -12,20 +12,13 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
         let path = Bundle.main.bundlePath as NSString
         var components = path.pathComponents as NSArray
-        
         components = components.subarray(with: NSRange(location: 0, length: components.count - 4)) as NSArray
-        
         let newPath = NSString.path(withComponents: components as! [String])
-        
-        
         NSWorkspace.shared().launchApplication(newPath)
-        
-        
         NSApp.terminate(nil)
     }
 

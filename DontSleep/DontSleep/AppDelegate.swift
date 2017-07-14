@@ -12,41 +12,29 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate
 {
-    //Preference Window..
+    //Preference Window
     var preferencesWindowController:NSWindowController?
     
-    
-    func applicationDidFinishLaunching(_ aNotification: Notification)
-    {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-       preferencesWindowController = NSStoryboard(name: "Preferences", bundle: nil).instantiateInitialController() as? NSWindowController
-        
-       
+       preferencesWindowController = NSStoryboard(name: StoryBoardName.preferences, bundle: nil).instantiateInitialController() as? NSWindowController
     }
 
-    
-    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
     
     
-    @IBAction func showPreferencesWindow(_ sender:AnyObject)
-    {
+    @IBAction func showPreferencesWindow(_ sender:AnyObject) {
        NSApplication.shared().activate(ignoringOtherApps: true)
         preferencesWindowController!.showWindow(sender)
         self.preferencesWindowController!.window?.delegate = self
-        
-        
     }
     
     func windowWillClose(_ notification: Notification) {
         
         
     }
-    
-    
-        
-    
+ 
 }
 

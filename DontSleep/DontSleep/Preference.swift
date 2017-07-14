@@ -14,28 +14,22 @@ class Preference: NSObject {
     var defaultKey:String
     var value:Bool{
         set{
-             self.willChangeValue(forKey: "value")
-            if(newValue == true)
-            {
+            self.willChangeValue(forKey: KeyName.value)
+            if(newValue == true) {
                 UserDefaults.standard.set(newValue, forKey: self.defaultKey)
-            }
-            else
-            {
+            }else {
                 UserDefaults.standard.removeObject(forKey: self.defaultKey)
             }
-            self.didChangeValue(forKey: "value")
+            self.didChangeValue(forKey: KeyName.value)
             UserDefaults.standard.synchronize()
         }
         get{
-            
             return UserDefaults.standard.bool(forKey: self.defaultKey)
         }
     }
     
-     init(title:String, defaultKey:String)
-     {
+     init(title:String, defaultKey:String) {
         self.title = title
         self.defaultKey = defaultKey
      }
-    
 }

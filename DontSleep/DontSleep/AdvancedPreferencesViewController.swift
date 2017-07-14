@@ -8,7 +8,6 @@
 
 import Cocoa
 
-let DSBatteryCapacityThresholdDidChangeNotification = "DSBatteryCapacityThresholdDidChangeNotification"
 class AdvancedPreferencesViewController: NSViewController {
 
     var preferences:Array<Preference> = []
@@ -26,33 +25,29 @@ class AdvancedPreferencesViewController: NSViewController {
         self.preferredContentSize = self.view.fittingSize
     }
     
-    func configureAdvancedPreferences()
-    {
+    func configureAdvancedPreferences() {
         var preferences = Array<Preference>()
         preferences.append(Preference(title: "Allow the display to sleep (when connected to AC power)", defaultKey: DSUserDefaultsKeyAllowDisplaySleep))
         preferences.append(Preference(title: "Disable menu bar icon highlight color",defaultKey:DSUserDefaultsKeyMenuBarIconHighlightDisabled))
         self.preferences = preferences
     }
     
-    // Mark: - Battery Status Preferences
+    // MARK: - Battery Status Preferences
     
-    @IBAction func batteryStatusPreferencesChanged(_ sender:AnyObject)
-    {
-        NotificationCenter.default.post(name: Notification.Name(rawValue: DSBatteryCapacityThresholdDidChangeNotification), object: nil)
+    @IBAction func batteryStatusPreferencesChanged(_ sender:AnyObject) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: Constant.batteryCapacityThresholdDidChangeNotification), object: nil)
     }
 
     
     // MARK: -Table View Delegate & Data Source
     
-    func numberOfRowsInTableView(_ tableView: NSTableView) -> Int
-    {
+    func numberOfRowsInTableView(_ tableView: NSTableView) -> Int {
         return self.preferences.count
     }
     
     func tableView(_ tableView: NSTableView,
         objectValueForTableColumn tableColumn: NSTableColumn?,
-        row: Int) -> AnyObject?
-    {
+        row: Int) -> AnyObject? {
            return self.preferences[row]
     }
     

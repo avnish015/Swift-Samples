@@ -23,7 +23,7 @@ let DS_5HOURS = DS_HOURS*5
 
 typealias DSSleepWakeTimerCompletionBlock = (Bool)->Void
 
-let SleepWakeTimeIntervalIndefinite = 0.0;
+let SleepWakeTimeIntervalIndefinite = 0.0
 
 
 
@@ -55,8 +55,7 @@ class SleepWakeTimer: NSObject {
     var  caffeinateTask:Process?
     
     
-    override init()
-    {
+    override init() {
         super.init()
 
             // Terminate all remaining tasks on app quit
@@ -65,112 +64,77 @@ class SleepWakeTimer: NSObject {
             self!.invalidate()
         })
     }
-        
- 
-  
     
-    deinit
-    {
+    deinit {
         self.invalidate()
     }
     
-    //#pragma mark - Scheduling
+    //MARK: - Scheduling
     
-    func scheduleWithTimeInterval(_ timeInterval:TimeInterval, completion:DSSleepWakeTimerCompletionBlock!)
-    {
+    func scheduleWithTimeInterval(_ timeInterval:TimeInterval, completion:DSSleepWakeTimerCompletionBlock!) {
 
-            self.completionBlock = completion;
-       
-    
-    // Set the fireDate
-        self.scheduledTimeInterval = timeInterval;
-        if(timeInterval != SleepWakeTimeIntervalIndefinite)
-        {
-        
+        self.completionBlock = completion
+        // Set the fireDate
+        self.scheduledTimeInterval = timeInterval
+        if timeInterval != SleepWakeTimeIntervalIndefinite {
             self.fireDate = Date(timeIntervalSinceNow: timeInterval)
-        
         }
-    
-    // Spawn caffeinate
+        // Spawn caffeinate
         self.spawnCaffeinateTaskForTimeInterval(timeInterval)
     }
     
-    func invalidate()
-    {
-        fireDate = nil;
+    func invalidate() {
+        fireDate = nil
         self.scheduledTimeInterval = SleepWakeTimeIntervalIndefinite
         self.terminateCaffeinateTask()
     }
     
-    func isScheduled()->Bool
-    {
-        if((self.caffeinateTask != nil) && self.caffeinateTask!.isRunning)
-        {
-            return true;
+    func isScheduled()->Bool {
+        if self.caffeinateTask != nil && self.caffeinateTask!.isRunning {
+            return true
         }
-    
-        return false;
+        return false
     }
     
-   // MARK: - Caffeinate Task Handling
-    
-    func spawnCaffeinateTaskForTimeInterval(_ timeInterval:TimeInterval)
-    {
+    // MARK: - Caffeinate Task Handling
+    func spawnCaffeinateTaskForTimeInterval(_ timeInterval:TimeInterval) {
         var arguments:[String] = Array()
         
-        if(UserDefaults.standard.bool(forKey: DSUserDefaultsKeyAllowDisplaySleep))
-        {
+        if UserDefaults.standard.bool(forKey: DSUserDefaultsKeyAllowDisplaySleep) {
             arguments.append("-s")
-        }
-        else
-        {
-            arguments.append("-di");
+        }else {
+            arguments.append("-di")
         }
         
-        
-        
-        
-        if(timeInterval != SleepWakeTimeIntervalIndefinite)
-        {
+        if timeInterval != SleepWakeTimeIntervalIndefinite {
             
             arguments.append("-t \(timeInterval)")
         }
         
         arguments.append("-w \(ProcessInfo.processInfo.processIdentifier)")
-        
-        self.willChangeValue(forKey: "scheduled")
+        self.willChangeValue(forKey: Constant.scheduled)
         caffeinateTask = Process.launchedProcess(launchPath: "/usr/bin/caffeinate", arguments:arguments)
-        
         //terminate Handler
         self.caffeinateTask!.terminationHandler = {[weak self] (task:Process)->Void in
             self!.invalidateScheduledTimer()
         }
-        
-        self.didChangeValue(forKey: "scheduled")
-
+        self.didChangeValue(forKey: Constant.scheduled)
     }
     
     //Terminate caffeinate with force
-    func terminateCaffeinateTask()
-    {
-        if let caffeinateTask = caffeinateTask
-        {
+    func terminateCaffeinateTask() {
+        if let caffeinateTask = caffeinateTask {
             caffeinateTask.terminationHandler = nil
             caffeinateTask.terminate()
             self.invalidateScheduledTimer()
         }
-        
-        
     }
     
-    func invalidateScheduledTimer()
-    {
-        self.willChangeValue(forKey: "scheduled");
-        self.caffeinateTask = nil;
-        self.scheduledTimeInterval = SleepWakeTimeIntervalIndefinite;
-        self.fireDate = nil;
-        self.didChangeValue(forKey: "scheduled");
-        
+    func invalidateScheduledTimer() {
+        self.willChangeValue(forKey: Constant.scheduled)
+        self.caffeinateTask = nil
+        self.scheduledTimeInterval = SleepWakeTimeIntervalIndefinite
+        self.fireDate = nil
+        self.didChangeValue(forKey: Constant.scheduled)
     }
-
 }

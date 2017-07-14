@@ -24,45 +24,34 @@ class GeneralPreferencesViewController: NSViewController {
         get{
             
             let storedDefaultInterval = UserDefaults.standard.defaultTimeInterval
-            
             let defaultDurations = self.activationDurations.filter { (activationDuration) -> Bool in
                 
-                if(activationDuration.seconds == storedDefaultInterval)
-                {
+                if(activationDuration.seconds == storedDefaultInterval) {
                     return true
-                }
-                else{
+                } else{
                     return false
                 }
             }
             return defaultDurations.first!
         }
-        
         set{
             
-            self.willChangeValue(forKey: "selectedActivationDuration")
+            self.willChangeValue(forKey: KeyName.selectedActivationDuration)
             UserDefaults.standard.defaultTimeInterval = newValue.seconds
             
             UserDefaults.standard.synchronize()
-            self.didChangeValue(forKey: "selectedActivationDuration")
+            self.didChangeValue(forKey: KeyName.selectedActivationDuration)
         }
-        
-        
     }
     
     
    
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        if(UserDefaults.standard.bool(forKey: DSUserDefaultsKeyLaunchAtLogin) == true)
-        {
+        if UserDefaults.standard.bool(forKey: DSUserDefaultsKeyLaunchAtLogin) == true {
             startAtLoginCheckBoxButton.state = NSOnState
-        }
-        else
-        {
+        } else {
             startAtLoginCheckBoxButton.state = NSOffState
         }
         
@@ -73,30 +62,19 @@ class GeneralPreferencesViewController: NSViewController {
         
         super.viewWillAppear()
         self.preferredContentSize = self.view.fittingSize
-        
     }
     
     
     /*ServiceManagement framework’s method called SMLoginItemSetEnabled. The first parameter in this method is a CFString containing the bundle identifier of the Helper application(DontSleepHelperApp). The second parameter is a BOOL indicating whether the Helper should launch at login or not. TRUE means that it will launch at login, while FALSE means that it won’t launch at login.
     */
 
-    @IBAction func startAtLoginPreferencesChanged(_ sender: NSButton)
-    {
+    @IBAction func startAtLoginPreferencesChanged(_ sender: NSButton) {
         
-        if(!SMLoginItemSetEnabled("Exilant.DontSleepHelperApp" as CFString,sender.state == NSOnState))
-        {
+        if !SMLoginItemSetEnabled(BundleIdentifier.helperApp as CFString,sender.state == NSOnState) {
             print("UnSuccessful")
         }
-        else
-        {
+        else {
             UserDefaults.standard.set(sender.state == NSOnState, forKey: DSUserDefaultsKeyLaunchAtLogin)
         }
-        
-        
     }
-
-    
-    deinit{
-            }
-    
 }
